@@ -24,7 +24,6 @@ const WeaponCard = ({
         md:hover:-translate-y-2
       "
     >
-      {/* IMAGE */}
       <div className="relative aspect-[3/4] w-full overflow-hidden">
         <Image
           src={image}
@@ -41,11 +40,9 @@ const WeaponCard = ({
           "
         />
 
-        {/* gradient tylko na desktop */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
       </div>
 
-      {/* CONTENT */}
       <div
         className="
           p-6
@@ -62,13 +59,11 @@ const WeaponCard = ({
           {description}
         </p>
 
-        {/* extended description */}
         <p
           className={`
             mt-3
             text-white/70
             transition-all duration-500
-            ${/* mobile: kontrola przez kliknięcie */ ""}
             ${isExpanded ? "opacity-100 max-h-96 overflow-visible" : "opacity-0 max-h-0 overflow-hidden"}
             md:opacity-0 md:max-h-0 md:overflow-hidden
             md:group-hover:opacity-100 md:group-hover:max-h-56
@@ -78,7 +73,6 @@ const WeaponCard = ({
           {extendedDescription}
         </p>
 
-        {/* przycisk rozwijania tylko na mobile */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
           className="mt-2 text-sm text-blue-400 md:hidden"
