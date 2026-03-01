@@ -9,12 +9,20 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-const navigationLeftSide = [
+const navigationLeftSide: NavItem[] = [
   { name: "Home", href: "/" },
-  { name: "O nas", href: "/about" },
+  {
+    name: "O nas",
+    href: "/about",
+    submenu: [
+      { name: "Miecz długi", href: "/longsword" },
+      { name: "Szabla", href: "/sword" },
+      { name: "Zajęcia dla dzieci", href: "/kids" },
+    ],
+  },
 ];
 
-const navigationRightSide = [
+const navigationRightSide: NavItem[] = [
   { name: "Grafik", href: "https://gdanskaszkolafechtunku.wod.guru/zajecia" },
   { name: "Cennik", href: "https://gdanskaszkolafechtunku.wod.guru/karnety" },
 ];
@@ -23,10 +31,15 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+interface NavItem {
+  name: string;
+  href: string;
+  submenu?: { name: string; href: string }[]; // opcjonalne
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
-  // Scroll detection
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -39,13 +52,10 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className={classNames(
-        "bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-bebas tracking-widest transition-all duration-300",
-      )}
+      className="bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-bebas tracking-widest transition-all duration-300"
     >
       {({ open }) => (
         <>
-          {/* DESKTOP */}
           <div
             className={classNames(
               "hidden sm:block transition-all duration-300 pt-10 pb-2",
@@ -56,27 +66,39 @@ export default function Navbar() {
               <div className="relative flex h-16 items-center justify-between">
                 <div className="flex flex-1 items-center justify-center">
                   <div className="flex">
-                    {/* LEFT */}
                     <div className="flex space-x-4 items-center">
                       {navigationLeftSide.map((item) => (
-                        <div key={item.name} className="w-44">
+                        <div key={item.name} className="w-44 relative group">
                           <a
                             href={item.href}
                             className="relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16
-                              after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
-                              after:transition-all after:duration-300
-                              hover:after:w-1/2 hover:after:left-1/4"
+                            after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
+                            after:transition-all after:duration-300
+                            hover:after:w-1/2 hover:after:left-1/4"
                           >
                             {item.name}
                           </a>
+
+                          {item.submenu && (
+                            <div className="absolute left-0 top-[calc(100%+5px)] hidden group-hover:block border-t-0 bg-black/50 backdrop-blur-sm border border-white/10 text-center">
+                              {item.submenu.map((sub) => (
+                                <a
+                                  key={sub.name}
+                                  href={sub.href}
+                                  className="block px-6 py-4 text-white hover:bg-white/10 transition rounded"
+                                >
+                                  {sub.name}
+                                </a>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
 
-                    {/* LOGO */}
-                    <div className={classNames("flex items-center px-8")}>
+                    <div className="flex items-center px-8">
                       <Image
-                        src={"/logo_white.png"}
+                        src="/logo_white.png"
                         alt="Logo"
                         width={120}
                         height={40}
@@ -84,16 +106,15 @@ export default function Navbar() {
                       />
                     </div>
 
-                    {/* RIGHT */}
                     <div className="flex space-x-4 items-center">
                       {navigationRightSide.map((item) => (
                         <div key={item.name} className="w-44">
                           <a
                             href={item.href}
                             className="relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16
-                              after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
-                              after:transition-all after:duration-300
-                              hover:after:w-1/2 hover:after:left-1/4"
+                            after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
+                            after:transition-all after:duration-300
+                            hover:after:w-1/2 hover:after:left-1/4"
                           >
                             {item.name}
                           </a>
@@ -106,7 +127,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* MOBILE */}
           <div className="sm:hidden flex items-center justify-between h-40 px-4 relative">
             <DisclosureButton className="text-white p-2">
               {open ? (
@@ -118,7 +138,6 @@ export default function Navbar() {
 
             <Image
               src="/logo_white.png"
-              className="relative"
               alt="Logo"
               width={100}
               height={40}
@@ -126,16 +145,31 @@ export default function Navbar() {
             />
           </div>
 
-          <DisclosurePanel className="sm:hidden bg-black border-t border-white/10">
+          <DisclosurePanel className="sm:hidden bg-black border-t-0 border-white/10">
             <div className="space-y-2 px-6 py-6">
               {[...navigationLeftSide, ...navigationRightSide].map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block text-center text-white text-lg font-semibold py-3 rounded-md hover:bg-white/10 transition"
-                >
-                  {item.name}
-                </a>
+                <div key={item.name}>
+                  <a
+                    href={item.href}
+                    className="block text-center text-white text-lg font-semibold py-3 rounded-md hover:bg-white/10 transition"
+                  >
+                    {item.name}
+                  </a>
+
+                  {item.submenu && (
+                    <div className="mt-2 space-y-1">
+                      {item.submenu.map((sub) => (
+                        <a
+                          key={sub.name}
+                          href={sub.href}
+                          className="block text-center text-white/80 text-base py-2 hover:bg-white/10 opacity-60 rounded"
+                        >
+                          {sub.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </DisclosurePanel>
