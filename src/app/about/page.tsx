@@ -6,24 +6,24 @@ export default function Page() {
     <div className="pt-28 ">
       {/* Hero section */}
       <div className="relative w-full h-[50vh] overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0 bg-[url('/background-about.png')] bg-cover bg-bottom">
-          {/* Gradient overlay */}
-          <div
-            className="absolute inset-0 pointer-events-none
-                      bg-gradient-to-b
-                      from-black/100
-                      via-black/20
-                      to-transparent
-                    "
-          />
-        </div>
-
-        {/* Centered text box */}
+        <Image
+          src="/background-about.png"
+          alt="Background"
+          fill
+          className="object-cover object-bottom"
+          priority
+        />
+        <div
+          className="absolute inset-0 pointer-events-none
+                bg-gradient-to-b
+                from-black/100
+                via-black/20
+                to-transparent"
+        />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-black/70 px-6 py-4 sm:px-10 sm:py-6 rounded-md shadow-lg w-full">
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bebas tracking-widest text-center">
-              O Gdańskiej Szkole Fechtunku
+              O nas
             </h1>
           </div>
         </div>
@@ -40,6 +40,7 @@ export default function Page() {
               width={500}
               height={600}
               className="rounded-lg shadow-lg"
+              priority
             />
           </div>
 
@@ -74,6 +75,7 @@ export default function Page() {
               alt="Logo Gdańskiej Szkoły Fechtunku"
               width={500}
               height={600}
+              priority
             />
           </div>
 

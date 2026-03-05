@@ -81,7 +81,7 @@ export default function Navbar() {
                           </Link>
 
                           {item.submenu && (
-                            <div className="absolute left-0 top-[calc(100%+3px)] hidden group-hover:block border-t-0 bg-black/50 backdrop-blur-sm border border-white/10 text-center">
+                            <div className="absolute left-0 top-[calc(100%)] hidden group-hover:block border-t-0 bg-black/50 backdrop-blur-sm border border-white/10 text-center">
                               {item.submenu.map((sub) => (
                                 <Link
                                   key={sub.name}
