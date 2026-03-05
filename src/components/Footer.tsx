@@ -97,7 +97,7 @@ export default function Footer() {
           ))}
         </ul>
 
-        <p className="text-center text-gray-300 text-sm italic px-4 font-lato tracking-widest">
+        <p className="text-center text-gray-300 text-sm italic px-4 font-trajan tracking-widest">
           &copy; 2026 Gdańska Szkoła Fechtunku. All rights reserved.
         </p>
       </div>

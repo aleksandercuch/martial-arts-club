@@ -26,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl" className={`${bebas.variable} ${lato.variable}`}>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/zop1lmn.css" />
+      </head>
       <body className="bg-[url('/bg.jpg')] bg-cover bg-center min-h-screen">
         <div className="flex flex-col min-h-screen">
           <Navbar />

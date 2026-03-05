@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
 // COMPONENTS
 import { Carousel } from "@/components/HomePage/Carousel/Carousel";
@@ -16,7 +17,7 @@ export default function Page() {
     <main className="flex flex-col items-center z-10">
       <Carousel />
       <div className="w-full bg-black text-white px-6 py-20 ">
-        <p className="max-w-5xl mx-auto text-center md:text-xl leading-relaxed tracking-widest font-light text-sm font-lato">
+        <p className="max-w-5xl mx-auto text-center md:text-xl leading-relaxed tracking-widest font-light text-sm font-trajan">
           Gdańska Szkoła Fechtunku to miejsce, gdzie pasja do szermierki
           historycznej łączy się z realnym rozwojem sprawności, koncentracji i
           charakteru. Oferujemy zajęcia z technik historycznych niezależnie od
@@ -26,10 +27,6 @@ export default function Page() {
         </p>
       </div>
       <BulletSection />
-      <Weapons />
-      {/* <div className="bg-black/50 text-white px-6 py-16 leading-relaxed text-lg font-mono w-full">
-        <About />
-      </div> */}
     </main>
   );
 }

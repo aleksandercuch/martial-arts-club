@@ -18,6 +18,7 @@ const config: Config = {
       fontFamily: {
         bebas: ["var(--font-bebas)", "sans-serif"],
         lato: ["var(--font-lato)", "ui-sans-serif", "system-ui"],
+        trajan: ['"Trajan Sans"', "sans-serif"],
       },
     },
   },

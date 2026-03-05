@@ -8,6 +8,7 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 const navigationLeftSide: NavItem[] = [
   { name: "Home", href: "/" },
@@ -16,8 +17,8 @@ const navigationLeftSide: NavItem[] = [
     href: "/about",
     submenu: [
       { name: "Miecz długi", href: "/longsword" },
-      { name: "Szabla", href: "/sword" },
-      { name: "Zajęcia dla dzieci", href: "/kids" },
+      { name: "Szabla", href: "/sabre" },
+      { name: "Zajęcia dla dzieci", href: "/children-training" },
     ],
   },
 ];
@@ -69,7 +70,7 @@ export default function Navbar() {
                     <div className="flex space-x-4 items-center">
                       {navigationLeftSide.map((item) => (
                         <div key={item.name} className="w-44 relative group">
-                          <a
+                          <Link
                             href={item.href}
                             className="relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16
                             after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
@@ -77,18 +78,18 @@ export default function Navbar() {
                             hover:after:w-1/2 hover:after:left-1/4"
                           >
                             {item.name}
-                          </a>
+                          </Link>
 
                           {item.submenu && (
-                            <div className="absolute left-0 top-[calc(100%+5px)] hidden group-hover:block border-t-0 bg-black/50 backdrop-blur-sm border border-white/10 text-center">
+                            <div className="absolute left-0 top-[calc(100%+3px)] hidden group-hover:block border-t-0 bg-black/50 backdrop-blur-sm border border-white/10 text-center">
                               {item.submenu.map((sub) => (
-                                <a
+                                <Link
                                   key={sub.name}
                                   href={sub.href}
                                   className="block px-6 py-4 text-white hover:bg-white/10 transition rounded"
                                 >
                                   {sub.name}
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           )}
