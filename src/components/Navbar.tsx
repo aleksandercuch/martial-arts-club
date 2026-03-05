@@ -16,8 +16,8 @@ const navigationLeftSide: NavItem[] = [
     href: "/about",
     submenu: [
       { name: "Miecz długi", href: "/longsword" },
-      { name: "Szabla", href: "/sword" },
-      { name: "Zajęcia dla dzieci", href: "/kids" },
+      { name: "Szabla", href: "/sabre" },
+      { name: "Zajęcia dla dzieci", href: "/children-training" },
     ],
   },
 ];

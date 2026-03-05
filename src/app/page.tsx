@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
 // COMPONENTS
 import { Carousel } from "@/components/HomePage/Carousel/Carousel";
@@ -26,10 +27,6 @@ export default function Page() {
         </p>
       </div>
       <BulletSection />
-      <Weapons />
-      {/* <div className="bg-black/50 text-white px-6 py-16 leading-relaxed text-lg font-mono w-full">
-        <About />
-      </div> */}
     </main>
   );
 }
