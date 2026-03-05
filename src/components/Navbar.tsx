@@ -53,7 +53,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-bebas tracking-widest transition-all duration-300"
+      className="bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-trajan tracking-widest transition-all duration-300"
     >
       {({ open }) => (
         <>
