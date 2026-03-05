@@ -13,7 +13,7 @@ export const BulletSection = () => {
           <h3 className="text-lg sm:text-xl font-semibold mb-3">
             Otwarte dla każdego
           </h3>
-          <p className="text-sm sm:text-base leading-relaxed opacity-90 font-lato">
+          <p className="text-sm sm:text-base leading-relaxed opacity-90 font-trajan">
             Bezpieczne treningi przystosowane zarówno dla początkujących jak i
             zaawansowanych.
           </p>
@@ -24,7 +24,7 @@ export const BulletSection = () => {
           <h3 className="text-lg sm:text-xl font-semibold mb-3">
             Zapewniamy profesjonalny sprzęt
           </h3>
-          <p className="text-sm sm:text-base leading-relaxed opacity-90 font-lato">
+          <p className="text-sm sm:text-base leading-relaxed opacity-90 font-trajan">
             Nad treningami czuwają doświadczeni instruktorzy.
           </p>
         </div>
@@ -34,7 +34,7 @@ export const BulletSection = () => {
           <h3 className="text-lg sm:text-xl font-semibold mb-3">
             Dołącz do społeczności pasjonatów
           </h3>
-          <p className="text-sm sm:text-base leading-relaxed opacity-90 font-lato">
+          <p className="text-sm sm:text-base leading-relaxed opacity-90 font-trajan">
             i znajdź przestrzeń do wspólnego rozwoju.
           </p>
         </div>

@@ -24,15 +24,13 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="text-gray-900">
+      <div className="text-gray-900 font-trajan">
         <article className="bg-black/50 text-white max-w-5xl mx-auto px-6 py-16 leading-relaxed text-lg font-lato tracking-widest">
           <p className="mb-4">
-            Długi miecz to nie tylko broń – to fundament europejskiej sztuki
-            walki, symbol rycerskiego etosu, dyscypliny oraz odpowiedzialności.
-            W tradycji średniowiecznej był narzędziem pojedynku, wojny i
-            osobistej obrony, ale także znakiem honoru i sprawiedliwości. Jego
-            znaczenie przetrwało wieki, stając się częścią kulturowego
-            dziedzictwa Europy.
+            Szabla stanowi symbol odwagi, wolności i fantazji - od sarmackich
+            pojedynków, po szarże ułańskie, których wspomnienie budzi podziw po
+            dziś dzień. Narzędzie walki, które łączy w sobie finezję, szybkość i
+            elegancję… oraz ten niepowtarzalny polski charakter.
           </p>
           <div className="flex flex-col md:flex-row md:gap-8 items-start">
             <div className="w-full md:w-1/3 flex-shrink-0 mb-6 md:mb-0">
@@ -45,28 +43,28 @@ export default function Page() {
               />
             </div>
 
-            <div className="w-full md:w-2/3">
+            <div className="w-full md:w-2/3 ">
               <p className="mb-4">
-                W Gdańskiej Szkole Fechtunku sekcja długiego miecza stanowi
-                centralny filar szkolenia. Naszą pracę opieramy przede wszystkim
-                na źródłach historycznych związanych z Gdańskiem – w
-                szczególności na <b>Kodeksie Gdańskim (Peter von Danzig)</b>,
-                będącym jednym z najważniejszych przekazów tradycji niemieckiej
-                szkoły szermierczej.
-              </p>
-
-              <p className="mb-4">
-                Trening łączy precyzję techniczną z taktycznym myśleniem.
-                Historyczne techniki adaptujemy do współczesnych realiów
-                turniejów sportowych, zachowując ich źródłową logikę i
-                integralność.
+                Szabla uczy zdecydowania - wymaga jasnej intencji i kontroli
+                zarówno nad bronią, jak i nad sobą samym. To trening, który
+                łączy historię, technikę i charakter - próba zrozumienia, jak
+                naprawdę walczono zakrzywionym ostrzem, które przez stulecia
+                budziło respekt na polach bitew w całej Europie.
               </p>
               <p className="mb-4">
-                Naszym celem jest nie tylko nauka walki, lecz kształtowanie
-                postawy – zdyscyplinowanej, świadomej i odpowiedzialnej. Sekcja
-                długiego miecza to przestrzeń, w której tradycja Gdańska spotyka
-                się z nowoczesnym treningiem, a historia staje się żywą
-                praktyką.
+                Podczas treningów w Gdańskiej Szkole Fechtunku sięgamy do źródeł
+                od XVI do początku XX wieku, analizując dawne opisy technik i
+                konfrontując je realiami dzisiejszych turniejów sportowych.
+                Korzystamy z bezpiecznych replik historycznych odmian szabli, co
+                pozwala odczuć ich wagę, wyważenie i specyfikę prowadzenia
+                cięcia.
+              </p>
+              <p className="mb-4">
+                Co istotne, historyczna walka szablą nie ograniczała się do
+                „czystych” wymian ciosów. Obejmowała przechwycenia, pracę na
+                wiązaniu broni, uderzenia rękojeścią, a nawet techniki
+                obalające. Była systemem kompletnym – nastawionym na skuteczność
+                w realnym starciu, a nie na widowiskowość.
               </p>
             </div>
           </div>

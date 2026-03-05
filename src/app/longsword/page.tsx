@@ -24,7 +24,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="text-gray-900">
+      <div className="text-gray-900 font-trajan">
         <article className="bg-black/50 text-white max-w-5xl mx-auto px-6 py-16 leading-relaxed text-lg font-lato tracking-widest">
           <p className="mb-4">
             Długi miecz to nie tylko broń – to fundament europejskiej sztuki
