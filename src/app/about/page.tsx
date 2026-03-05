@@ -22,7 +22,7 @@ export default function Page() {
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-black/70 px-6 py-4 sm:px-10 sm:py-6 rounded-md shadow-lg w-full">
-            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bebas tracking-widest text-center">
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-trajan tracking-widest text-center">
               O nas
             </h1>
           </div>

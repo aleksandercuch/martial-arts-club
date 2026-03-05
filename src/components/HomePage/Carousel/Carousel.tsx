@@ -112,7 +112,7 @@ export const Carousel = () => {
         <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
           <h1
             className="
-              font-coldiac
+              font-trajan
               text-white
               text-center
               tracking-wide

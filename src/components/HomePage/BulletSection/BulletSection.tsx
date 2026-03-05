@@ -6,7 +6,7 @@ import { CiDumbbell } from "react-icons/ci";
 
 export const BulletSection = () => {
   return (
-    <section className="w-full bg-black/40 text-white px-6 py-20 md:py-28 lg:py-36 font-bebas tracking-widest">
+    <section className="w-full bg-black/40 text-white px-6 py-20 md:py-28 lg:py-36 font-trajan tracking-widest">
       <div className="max-w-5xl mx-auto grid gap-16 md:gap-12 md:grid-cols-3 text-center">
         <div className="flex flex-col items-center">
           <FaShieldAlt className="mb-4 text-white/90 text-5xl sm:text-6xl md:text-7xl lg:text-8xl" />
