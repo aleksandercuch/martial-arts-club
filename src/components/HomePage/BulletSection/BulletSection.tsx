@@ -33,7 +33,7 @@ export const BulletSection = () => {
             DOŁĄCZ DO SPOŁECZNOŚCI PASJONATÓW
           </h3>
           <p className="text-xs  leading-relaxed opacity-90 font-trajan">
-            I ZNAJDŹ PRZESTRZEŃ DO WSPÓLNEGO ROZWOJU.
+            NABÓR TRWA CAŁY ROK.
           </p>
         </div>
       </div>
