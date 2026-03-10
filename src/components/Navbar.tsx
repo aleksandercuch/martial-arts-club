@@ -16,9 +16,9 @@ const navigationLeftSide: NavItem[] = [
     name: "O nas",
     href: "/about",
     submenu: [
-      { name: "Miecz długi", href: "/longsword" },
-      { name: "Szabla", href: "/sabre" },
-      { name: "Zajęcia dla dzieci", href: "/children-training" },
+      { name: "MIECZ DŁUGI", href: "/longsword" },
+      { name: "SZABLA", href: "/sabre" },
+      { name: "ZAJĘCIA DLA DZIECI", href: "/children-training" },
     ],
   },
 ];

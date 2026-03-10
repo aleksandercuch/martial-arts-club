@@ -98,7 +98,7 @@ export default function Footer() {
         </ul>
 
         <p className="text-center text-gray-300 text-sm italic px-4 font-trajan tracking-widest">
-          &copy; 2026 Gdańska Szkoła Fechtunku. All rights reserved.
+          &copy; 2026 GDAŃSKA SZKOŁA FECHTUNKU. ALL RIGHTS RESERVED.
         </p>
       </div>
     </footer>
