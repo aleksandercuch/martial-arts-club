@@ -137,13 +137,15 @@ export default function Navbar() {
               )}
             </DisclosureButton>
 
-            <Image
-              src="/logo_white.png"
-              alt="Logo"
-              width={100}
-              height={40}
-              priority
-            />
+            <Link href={"/"}>
+              <Image
+                src="/logo_white.png"
+                alt="Logo"
+                width={100}
+                height={40}
+                priority
+              />
+            </Link>
           </div>
 
           <DisclosurePanel className="sm:hidden bg-black border-t-0 border-white/10">
@@ -163,7 +165,7 @@ export default function Navbar() {
                         <a
                           key={sub.name}
                           href={sub.href}
-                          className="block text-center text-white/80 text-base py-2 hover:bg-white/10 opacity-60 rounded"
+                          className="block text-center text-white text-base py-2 rounded"
                         >
                           {sub.name}
                         </a>
