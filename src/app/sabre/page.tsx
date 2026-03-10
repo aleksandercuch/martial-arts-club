@@ -59,7 +59,7 @@ export default function Page() {
               <p className="mb-4">
                 Podczas treningów w Gdańskiej Szkole Fechtunku sięgamy do źródeł
                 od XVI do początku XX wieku, analizując dawne opisy technik i
-                konfrontując je realiami dzisiejszych turniejów sportowych.
+                konfrontując je z realiami dzisiejszych turniejów sportowych.
                 Korzystamy z bezpiecznych replik historycznych odmian szabli, co
                 pozwala odczuć ich wagę, wyważenie i specyfikę prowadzenia
                 cięcia.
