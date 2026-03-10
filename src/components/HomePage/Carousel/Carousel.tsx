@@ -120,7 +120,6 @@ export const Carousel = () => {
               text-3xl
               md:text-5xl
               drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]
-              uppercase
               bg-black/40
               rounded-xl
               p-5
@@ -128,7 +127,7 @@ export const Carousel = () => {
               top-36
             "
           >
-            Tutaj przeszłość spotyka się z teraźniejszością
+            TUTAJ PRZESZŁOŚĆ SPOTYKA SIĘ Z TERAŹNIEJSZOŚCIĄ
           </h1>
         </div>
 
