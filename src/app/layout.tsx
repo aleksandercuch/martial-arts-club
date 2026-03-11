@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pl" className={`${bebas.variable} ${lato.variable}`}>
       <head>
+        <title>Gdańska Szkoła Fechtunku im. Piotra Gdańska</title>
         <link rel="stylesheet" href="https://use.typekit.net/zop1lmn.css" />
       </head>
       <body className="bg-[url('/bg.jpg')] bg-cover bg-center min-h-screen">
