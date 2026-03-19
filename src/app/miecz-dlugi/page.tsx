@@ -7,7 +7,7 @@ export default function Page() {
       <div className="relative w-full h-[50vh] overflow-hidden">
         <Image
           src="/background-about.png"
-          alt="Background"
+          alt="Trening szermierki w Gdańsku"
           fill
           className="object-cover object-bottom"
           priority
@@ -42,7 +42,7 @@ export default function Page() {
             <div className="w-full md:w-1/3 flex-shrink-0 mb-6 md:mb-0">
               <Image
                 src="/sword.jpg"
-                alt="longsword"
+                alt="Trening szermierki w Gdańsku"
                 width={400}
                 height={600}
                 className="rounded-lg"

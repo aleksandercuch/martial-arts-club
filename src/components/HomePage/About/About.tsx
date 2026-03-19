@@ -31,7 +31,7 @@ export const About = () => {
         <Image
           className="w-48 sm:w-64 md:w-80 relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
           src="/logo_white.png"
-          alt="Next.js Logo"
+          alt="Trening szermierki w Gdańsku"
           width={350}
           height={40}
           priority
