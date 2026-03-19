@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { translations } from "@/messages/translations";
 
 export default function Page() {
   return (
@@ -22,7 +23,7 @@ export default function Page() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-black/70 px-6 py-4 sm:px-10 sm:py-6 rounded-md shadow-lg w-full">
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-trajan tracking-widest text-center">
-              ZAJĘCIA DLA DZIECI
+              {translations.pl.Children.title}
             </h1>
           </div>
         </div>
@@ -30,14 +31,7 @@ export default function Page() {
 
       <div className="text-gray-900 font-trajan">
         <article className="bg-black/50 text-white max-w-5xl mx-auto px-6 py-16 leading-relaxed text-lg font-lato tracking-widest">
-          <p>
-            Sekcja dziecięca to przestrzeń świadomego i odpowiedzialnego rozwoju
-            najmłodszych. Trening opieramy przede wszystkim na wszechstronnym
-            rozwoju motorycznym. Kształtujemy koordynację, równowagę, szybkość
-            reakcji, siłę, mobilność oraz ogólną sprawność fizyczną. Zajęcia
-            mają dynamiczny, angażujący charakter i są dostosowane do wieku oraz
-            możliwości uczestników.
-          </p>
+          <p>{translations.pl.Children.paragraphOne}</p>
           <div className="w-full my-6 relative h-[400px] sm:h-[600px]">
             <Image
               src="/child.jpg"
@@ -47,18 +41,8 @@ export default function Page() {
               priority
             />
           </div>
-          <p>
-            Obok rozwoju fizycznego równie ważny jest dla nas aspekt
-            wychowawczy. Uczymy koncentracji, samodyscypliny, pracy w grupie
-            oraz szacunku wobec partnera treningowego. Poprzez elementy
-            szermierki i ćwiczenia ogólnorozwojowe budujemy pewność siebie,
-            odporność psychiczną oraz zdrowe podejście do wyzwań.
-          </p>
-          <p className="mt-6">
-            Sekcja dzieci w Gdańskiej Szkole Fechtunku to nie tylko zajęcia
-            sportowe – to fundament przyszłej sprawności, charakteru i
-            świadomego stylu życia.
-          </p>
+          <p>{translations.pl.Children.paragraphTwo}</p>
+          <p className="mt-6">{translations.pl.Children.paragraphThree}</p>
           <div className="clear-both" />
         </article>
       </div>

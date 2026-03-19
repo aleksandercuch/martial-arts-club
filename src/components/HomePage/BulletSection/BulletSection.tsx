@@ -1,39 +1,45 @@
-"use client";
-
 import { FaShieldAlt } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { CiDumbbell } from "react-icons/ci";
+import { translations } from "@/messages/translations";
+import { usePathname } from "next/navigation";
 
 export const BulletSection = () => {
+  const pathname = usePathname();
+  const segments = pathname.split("/").filter(Boolean);
+  const currentLocale = segments[0] === "en" ? "en" : "pl";
+  const t = translations[currentLocale];
+
   return (
     <section className="w-full bg-black/40 text-white px-6 py-20 md:py-28 lg:py-36 font-trajan tracking-widest">
       <div className="max-w-5xl mx-auto grid gap-16 md:gap-12 md:grid-cols-3 text-center">
         <div className="flex flex-col items-center">
           <FaShieldAlt className="mb-4 text-white/90 text-5xl sm:text-6xl md:text-7xl lg:text-8xl" />
-          <h3 className="text-base font-semibold mb-3">OTWARTE DLA KAŻDEGO</h3>
+          <h3 className="text-base font-semibold mb-3">
+            {t.HomePage.bulletOneTitle}
+          </h3>
           <p className="text-xs leading-relaxed opacity-90 font-trajan">
-            BEZPIECZNE TRENINGI PRZYSTOSOWANE ZARÓWNO DLA POCZĄTKUJĄCYCH JAK I
-            ZAAWANSOWANYCH.
+            {t.HomePage.bulletOneDesc}
           </p>
         </div>
 
         <div className="flex flex-col items-center">
           <CiDumbbell className="mb-4 text-white/90 text-5xl sm:text-6xl md:text-7xl lg:text-8xl" />
           <h3 className="text-base font-semibold mb-3">
-            ZAPEWNIAMY PROFESJONALNY SPRZĘT
+            {t.HomePage.bulletTwoTitle}
           </h3>
           <p className="text-xs leading-relaxed opacity-90 font-trajan">
-            NAD TRENINGAMI CZUWAJĄ DOŚWIADCZENI INSTRUKTORZY.
+            {t.HomePage.bulletTwoDesc}
           </p>
         </div>
 
         <div className="flex flex-col items-center">
           <FaPeopleGroup className="mb-4 text-white/90 text-5xl sm:text-6xl md:text-7xl lg:text-8xl" />
           <h3 className="text-base font-semibold mb-3">
-            DOŁĄCZ DO SPOŁECZNOŚCI PASJONATÓW
+            {t.HomePage.bulletThreeTitle}
           </h3>
-          <p className="text-xs  leading-relaxed opacity-90 font-trajan">
-            NABÓR TRWA CAŁY ROK.
+          <p className="text-xs leading-relaxed opacity-90 font-trajan">
+            {t.HomePage.bulletThreeDesc}
           </p>
         </div>
       </div>

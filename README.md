@@ -30,6 +30,9 @@ Responsive-first approach with emphasis on mobile UX
 
 Static generation / optimized rendering strategy for performance and SEO
 
+Internationalization Approach:
+The website uses duplicated static pages for Polish (/pl) and English (/en) content. This approach was chosen due to the client’s requirement for a fully static solution on Dhosting. While Next.js supports dynamic [locale]-based routing and automatic redirects, implementing it would have introduced additional runtime complexity and hosting costs. Choosing a static, duplicated-page structure allowed us to deliver a fast, SEO-optimized, and maintainable solution that fit within the client’s budget and hosting constraints.
+
 Minimal dependency footprint to reduce bundle size and long-term maintenance cost
 
 Trade-offs:
@@ -111,12 +114,10 @@ Analytics-driven UX improvements
 Internationalization (i18n) support
 
 Local Setup
-
 git clone https://github.com/aleksandercuch/martial-arts-club.git
 cd martial-arts-club
 npm install
 npm run dev
-
 Contact
 
 Feel free to reach out if you’d like to discuss architecture decisions or implementation details.

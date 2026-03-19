@@ -9,24 +9,9 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-
-const navigationLeftSide: NavItem[] = [
-  { name: "Home", href: "/" },
-  {
-    name: "O nas",
-    href: "/o-nas",
-    submenu: [
-      { name: "MIECZ DŁUGI", href: "/miecz-dlugi" },
-      { name: "SZABLA", href: "/szabla" },
-      { name: "ZAJĘCIA DLA DZIECI", href: "/szermierka-dzieci" },
-    ],
-  },
-];
-
-const navigationRightSide: NavItem[] = [
-  { name: "Grafik", href: "https://gdanskaszkolafechtunku.wod.guru/zajecia" },
-  { name: "Cennik", href: "https://gdanskaszkolafechtunku.wod.guru/karnety" },
-];
+import { usePathname, useRouter } from "next/navigation";
+import { translations } from "../messages/translations"; // adjust path if needed
+import ReactCountryFlag from "react-country-flag";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -35,20 +20,58 @@ function classNames(...classes: string[]) {
 interface NavItem {
   name: string;
   href: string;
-  submenu?: { name: string; href: string }[]; // opcjonalne
+  submenu?: { name: string; href: string }[];
 }
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const segments = pathname.split("/").filter(Boolean);
+  const currentLocale = segments[0] === "en" ? "en" : "pl";
+  const t = translations[currentLocale];
+
+  const navigationLeftSide: NavItem[] = [
+    { name: t.Layout.home, href: "/" },
+    {
+      name: t.Layout.about,
+      href: "/o-nas",
+      submenu: [
+        { name: t.Layout.sword, href: "/miecz-dlugi" },
+        { name: t.Layout.sabre, href: "/szabla" },
+        { name: t.Layout.children, href: "/szermierka-dzieci" },
+      ],
+    },
+  ];
+
+  const navigationRightSide: NavItem[] = [
+    {
+      name: t.Layout.schedule,
+      href: "https://gdanskaszkolafechtunku.wod.guru/zajecia",
+    },
+    {
+      name: t.Layout.prices,
+      href: "https://gdanskaszkolafechtunku.wod.guru/karnety",
+    },
+  ];
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
+    const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleLanguageSwitch = () => {
+    const newLocale = currentLocale === "pl" ? "en" : "pl";
+    const newPath = `/${newLocale}/${segments.slice(1).join("/")}`;
+    router.push(newPath);
+  };
+
+  const getHref = (href: string) => {
+    if (href.startsWith("http")) return href;
+    return `/${currentLocale}${href.startsWith("/") ? href : "/" + href}`;
+  };
 
   return (
     <Disclosure
@@ -63,41 +86,59 @@ export default function Navbar() {
               scrolled ? "mb-10" : "",
             )}
           >
+            <div className="absolute right-9 top-1/2 -translate-y-1/2">
+              <button onClick={handleLanguageSwitch}>
+                {currentLocale === "pl" ? (
+                  <ReactCountryFlag
+                    countryCode="GB"
+                    svg
+                    title="English"
+                    style={{ width: "40px", height: "40px" }}
+                  />
+                ) : (
+                  <ReactCountryFlag
+                    countryCode="PL"
+                    svg
+                    title="Polski"
+                    style={{ width: "40px", height: "40px" }}
+                  />
+                )}
+              </button>
+            </div>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="flex flex-1 items-center justify-center">
-                  <div className="flex">
-                    <div className="flex space-x-4 items-center">
-                      {navigationLeftSide.map((item) => (
-                        <div key={item.name} className="w-44 relative group">
-                          <Link
-                            href={item.href}
-                            className="relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16
-                            after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
-                            after:transition-all after:duration-300
-                            hover:after:w-1/2 hover:after:left-1/4"
-                          >
-                            {item.name}
-                          </Link>
+                  <div className="flex space-x-4 items-center">
+                    {navigationLeftSide.map((item) => (
+                      <div key={item.name} className="w-44 relative group">
+                        <Link
+                          href={getHref(item.href)}
+                          className="relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16
+                          after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
+                          after:transition-all after:duration-300
+                          hover:after:w-1/2 hover:after:left-1/4"
+                        >
+                          {item.name}
+                        </Link>
+                        {item.submenu && (
+                          <div className="absolute left-0 top-[calc(100%)] hidden group-hover:block border-t-0 bg-black/50 backdrop-blur-sm border border-white/10 text-center">
+                            {item.submenu.map((sub) => (
+                              <Link
+                                key={sub.name}
+                                href={getHref(sub.href)}
+                                className="block px-6 py-4 text-white hover:bg-white/10 transition rounded"
+                              >
+                                {sub.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
 
-                          {item.submenu && (
-                            <div className="absolute left-0 top-[calc(100%)] hidden group-hover:block border-t-0 bg-black/50 backdrop-blur-sm border border-white/10 text-center">
-                              {item.submenu.map((sub) => (
-                                <Link
-                                  key={sub.name}
-                                  href={sub.href}
-                                  className="block px-6 py-4 text-white hover:bg-white/10 transition rounded"
-                                >
-                                  {sub.name}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="flex items-center px-8">
+                  <div className="flex items-center px-8">
+                    <Link href={`/${currentLocale}`}>
                       <Image
                         src="/logo_white.png"
                         alt="Trening szermierki w Gdańsku"
@@ -105,23 +146,23 @@ export default function Navbar() {
                         height={40}
                         priority
                       />
-                    </div>
+                    </Link>
+                  </div>
 
-                    <div className="flex space-x-4 items-center">
-                      {navigationRightSide.map((item) => (
-                        <div key={item.name} className="w-44">
-                          <a
-                            href={item.href}
-                            className="relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16
-                            after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
-                            after:transition-all after:duration-300
-                            hover:after:w-1/2 hover:after:left-1/4"
-                          >
-                            {item.name}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="flex space-x-4 items-center">
+                    {navigationRightSide.map((item) => (
+                      <div key={item.name} className="w-44">
+                        <a
+                          href={getHref(item.href)}
+                          className="relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16
+                          after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
+                          after:transition-all after:duration-300
+                          hover:after:w-1/2 hover:after:left-1/4"
+                        >
+                          {item.name}
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -137,7 +178,7 @@ export default function Navbar() {
               )}
             </DisclosureButton>
 
-            <Link href={"/"}>
+            <Link href={`/${currentLocale}`}>
               <Image
                 src="/logo_white.png"
                 alt="Trening szermierki w Gdańsku"
@@ -146,6 +187,24 @@ export default function Navbar() {
                 priority
               />
             </Link>
+
+            <button onClick={handleLanguageSwitch}>
+              {currentLocale === "pl" ? (
+                <ReactCountryFlag
+                  countryCode="GB"
+                  svg
+                  title="English"
+                  style={{ width: "30px", height: "30px" }}
+                />
+              ) : (
+                <ReactCountryFlag
+                  countryCode="PL"
+                  svg
+                  title="Polski"
+                  style={{ width: "30px", height: "30px" }}
+                />
+              )}
+            </button>
           </div>
 
           <DisclosurePanel className="sm:hidden bg-black border-t-0 border-white/10">
@@ -153,7 +212,7 @@ export default function Navbar() {
               {[...navigationLeftSide, ...navigationRightSide].map((item) => (
                 <div key={item.name}>
                   <a
-                    href={item.href}
+                    href={getHref(item.href)}
                     className="block text-center text-white text-lg font-semibold py-3 rounded-md hover:bg-white/10 transition"
                   >
                     {item.name}
@@ -164,7 +223,7 @@ export default function Navbar() {
                       {item.submenu.map((sub) => (
                         <a
                           key={sub.name}
-                          href={sub.href}
+                          href={getHref(sub.href)}
                           className="block text-center text-white text-base py-2 rounded"
                         >
                           {sub.name}
