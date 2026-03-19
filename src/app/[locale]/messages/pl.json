@@ -1,0 +1,51 @@
+{
+  "Layout": {
+    "home": "HOME",
+    "about": "O NAS",
+    "sword": "MIECZ DŁUGI",
+    "sabre": "SZABLA",
+    "children": "ZAJĘCIA DLA DZIECI",
+    "schedule": "GRAFIK",
+    "prices": "CENNIK",
+    "footer": "GDAŃSKA SZKOŁA FECHTUNKU. ALL RIGHTS RESERVED."
+  },
+  "HomePage": {
+    "title": "TUTAJ PRZESZŁOŚĆ SPOTYKA SIĘ Z TERAŹNIEJSZOŚCIĄ",
+    "description": "GDAŃSKA SZKOŁA FECHTUNKU TO MIEJSCE, GDZIE PASJA DO SZERMIERKI HISTORYCZNEJ ŁĄCZY SIĘ Z REALNYM ROZWOJEM SPRAWNOŚCI, KONCENTRACJI I CHARAKTERU. OFERUJEMY ZAJĘCIA Z TECHNIK HISTORYCZNYCH NIEZALEŻNIE OD POZIOMU ZAAWANSOWANIA. PRZYJDŹ I SPRAWDŹ JAK ZAPOMNIANE TECHNIKI DAWNYCH MISTRZÓW ŁĄCZĄ SIĘ ZE WSPÓŁCZESNĄ METODYKĄ SPORTOWĄ. DOŁĄCZ DO NAS I ODKRYJ HISTORIĘ NA NOWO!",
+    "bulletOneTitle": "OTWARTE DLA KAŻDEGO",
+    "bulletOneDesc": "BEZPIECZNE TRENINGI PRZYSTOSOWANE ZARÓWNO DLA POCZĄTKUJĄCYCH JAK I ZAAWANSOWANYCH.",
+    "bulletTwoTitle": "ZAPEWNIAMY PROFESJONALNY SPRZĘT",
+    "bulletTwoDesc": "NAD TRENINGAMI CZUWAJĄ DOŚWIADCZENI INSTRUKTORZY.",
+    "bulletThreeTitle": "DOŁĄCZ DO SPOŁECZNOŚCI PASJONATÓW",
+    "bulletThreeDesc": "NABÓR TRWA CAŁY ROK."
+  },
+  "About": {
+    "title": "O NAS",
+    "paragraphOne": "Fundacja Klub Sportowy Gdańska Szkoła Fechtunku im. Piotra z Gdańska powstała z potrzeby ożywienia zapomnianej części gdańskiego dziedzictwa — tradycji dawnych szkół fechtunku, które w średniowieczu stanowiły ważny element kultury mieszczańskiej i rycerskiej miasta. Naszą misją jest łączenie historii, sportu i edukacji: przywracamy do życia naukę średniowiecznej i nowożytnej sztuki walki mieczem, szablą i innymi rodzajami broni białej, opierając się na źródłach historycznych i traktatach dawnych mistrzów.",
+    "paragraphTwo": "Patronem naszej fundacji jest Piotr z Gdańska (Peter von Danzig) – XV-wieczny mistrz fechtunku, autor jednego z najważniejszych traktatów szermierczych w Europie. W jego pismach po raz pierwszy pojawia się idea, że szermierka nie jest wyłącznie techniką walki, lecz sztuką rozumu, dyscypliny i honoru. To właśnie tę filozofię przenosimy w XXI wiek.",
+    "paragraphThree": "Logo Gdańskiej Szkoły Fechtunku im. Piotra z Gdańska to nie tylko znak rozpoznawczy – to wyraz naszej tożsamości, szacunku dla tradycji oraz idei, które przyświecają naszej działalności. Symboliczne zbrojne ramię dzierżące miecz, inspirowane banderą królewską Rzeczypospolitej Obojga Narodów, niesie ze sobą przekaz siły, odwagi i gotowości do obrony wartości.",
+    "paragraphFour": "Nasze działania wpisują się w międzynarodowy ruch HEMA (Historical European Martial Arts) – współczesną społeczność naukowców, rekonstruktorów i sportowców z całego świata, którzy poprzez badania dawnych traktatów szermierczych odtwarzają europejskie sztuki walki sprzed epoki broni palnej. Od 2025 roku jesteśmy członkiem wspierającym Polskiego Związku Szermierki Historycznej - ogólnopolskiej organizacji zrzeszających kluby i trenerów w całej Polsce.",
+    "paragraphFive": "Fundacja rozwija działalność edukacyjną i sportową – prowadzimy treningi dla dorosłych i dzieci, organizujemy wykłady, prelekcje i pokazy historyczne, współpracujemy z instytucjami kultury oraz środowiskiem rekonstrukcyjnym.",
+    "paragraphSix": "Dążymy do tego, by Gdańska Szkoła Fechtunku stała się nowoczesnym centrum kultury historycznej i sportowej, w którym duch dawnych mistrzów spotyka się z pasją współczesnych mieszkańców."
+  },
+  "Sword": {
+    "title": "MIECZ DŁUGI",
+    "paragraphOne": "Długi miecz to nie tylko broń – to fundament europejskiej sztuki walki, symbol rycerskiego etosu, dyscypliny oraz odpowiedzialności. W tradycji średniowiecznej był narzędziem pojedynku, wojny i osobistej obrony, ale także znakiem honoru i sprawiedliwości. Jego znaczenie przetrwało wieki, stając się częścią kulturowego dziedzictwa Europy.",
+    "paragraphTwo": "W Gdańskiej Szkole Fechtunku sekcja długiego miecza stanowi centralny filar szkolenia. Naszą pracę opieramy przede wszystkim na źródłach historycznych związanych z Gdańskiem – w szczególności na Kodeksie Gdańskim (Peter von Danzig), będącym jednym z najważniejszych przekazów tradycji niemieckiej szkoły szermierczej.",
+    "paragraphThree": "Trening łączy precyzję techniczną z taktycznym myśleniem. Historyczne techniki adaptujemy do współczesnych realiów turniejów sportowych, zachowując ich źródłową logikę i integralność.",
+    "paragraphFour": "Naszym celem jest nie tylko nauka walki, lecz kształtowanie postawy – zdyscyplinowanej, świadomej i odpowiedzialnej. Sekcja długiego miecza to przestrzeń, w której tradycja Gdańska spotyka się z nowoczesnym treningiem, a historia staje się żywą praktyką."
+  },
+  "Sabre": {
+    "title": "SZABLA",
+    "paragraphOne": "Szabla stanowi symbol odwagi, wolności i fantazji - od sarmackich pojedynków, po szarże ułańskie, których wspomnienie budzi podziw po dziś dzień. Narzędzie walki, które łączy w sobie finezję, szybkość i elegancję… oraz ten niepowtarzalny polski charakter.",
+    "paragraphTwo": "Szabla uczy zdecydowania - wymaga jasnej intencji i kontroli zarówno nad bronią, jak i nad sobą samym. To trening, który łączy historię, technikę i charakter - próba zrozumienia, jak naprawdę walczono zakrzywionym ostrzem, które przez stulecia budziło respekt na polach bitew w całej Europie.",
+    "paragraphThree": "Podczas treningów w Gdańskiej Szkole Fechtunku sięgamy do źródeł od XVI do początku XX wieku, analizując dawne opisy technik i konfrontując je z realiami dzisiejszych turniejów sportowych. Korzystamy z bezpiecznych replik historycznych odmian szabli, co pozwala odczuć ich wagę, wyważenie i specyfikę prowadzenia cięcia.",
+    "paragraphFour": "Co istotne, historyczna walka szablą nie ograniczała się do „czystych” wymian ciosów. Obejmowała przechwycenia, pracę na wiązaniu broni, uderzenia rękojeścią, a nawet techniki obalające. Była systemem kompletnym – nastawionym na skuteczność w realnym starciu, a nie na widowiskowość."
+  },
+  "Children": {
+    "title": "ZAJĘCIA DLA DZIECI",
+    "paragraphOne": "Sekcja dziecięca to przestrzeń świadomego i odpowiedzialnego rozwoju najmłodszych. Trening opieramy przede wszystkim na wszechstronnym rozwoju motorycznym. Kształtujemy koordynację, równowagę, szybkość reakcji, siłę, mobilność oraz ogólną sprawność fizyczną. Zajęcia mają dynamiczny, angażujący charakter i są dostosowane do wieku oraz możliwości uczestników.",
+    "paragraphTwo": "Obok rozwoju fizycznego równie ważny jest dla nas aspekt wychowawczy. Uczymy koncentracji, samodyscypliny, pracy w grupie oraz szacunku wobec partnera treningowego. Poprzez elementy szermierki i ćwiczenia ogólnorozwojowe budujemy pewność siebie, odporność psychiczną oraz zdrowe podejście do wyzwań.",
+    "paragraphThree": "Sekcja dzieci w Gdańskiej Szkole Fechtunku to nie tylko zajęcia sportowe – to fundament przyszłej sprawności, charakteru i świadomego stylu życia."
+  }
+}
