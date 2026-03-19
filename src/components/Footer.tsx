@@ -29,7 +29,7 @@ export default function Footer() {
           >
             <Image
               src="/phf_logo.png"
-              alt="PHF Logo"
+              alt="Trening szermierki w Gdańsku"
               width={160}
               height={160}
               className="object-contain"
@@ -43,7 +43,7 @@ export default function Footer() {
           >
             <Image
               src="/spes_logo.png"
-              alt="Spes Logo"
+              alt="Trening szermierki w Gdańsku"
               width={180}
               height={160}
               className="object-contain"
@@ -57,7 +57,7 @@ export default function Footer() {
           >
             <Image
               src="/logokrieger.png"
-              alt="Krieger Weapons Logo"
+              alt="Trening szermierki w Gdańsku"
               width={160}
               height={160}
               className="object-contain"
@@ -71,7 +71,7 @@ export default function Footer() {
           >
             <Image
               src="/sparring_gloves_logo.jpg"
-              alt="Sparring Gloves Logo"
+              alt="Trening szermierki w Gdańsku"
               width={160}
               height={160}
               className="object-contain"

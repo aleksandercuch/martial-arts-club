@@ -27,7 +27,7 @@ const WeaponCard = ({
       <div className="relative aspect-[3/4] w-full overflow-hidden">
         <Image
           src={image}
-          alt={title}
+          alt="Trening szermierki w Gdańsku"
           fill
           className="
             object-cover

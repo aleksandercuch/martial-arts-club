@@ -13,7 +13,7 @@ export const ImageCard = ({ imgSrc, title, description }: Props) => {
       <Image
         className="relative h-full w-full object-cover"
         src={imgSrc}
-        alt="Next.js Card"
+        alt="Trening szermierki w Gdańsku"
         fill={true}
         priority
         sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"

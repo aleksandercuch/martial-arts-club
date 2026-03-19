@@ -8,7 +8,7 @@ export default function Page() {
       <div className="relative w-full h-[50vh] overflow-hidden">
         <Image
           src="/background-about.png"
-          alt="Background"
+          alt="Trening szermierki w Gdańsku"
           fill
           className="object-cover object-bottom"
           priority
@@ -72,7 +72,7 @@ export default function Page() {
           <div className="relative float-left mr-8 mb-6 w-full sm:w-1/2 lg:w-1/3">
             <Image
               src="/logo_white.png"
-              alt="Logo Gdańskiej Szkoły Fechtunku"
+              alt="Trening szermierki w Gdańsku"
               width={500}
               height={600}
               priority

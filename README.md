@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Martial Arts Club Platform
 
-## Getting Started
+Live: https://gdanskaszkolafechtunku.pl/
 
-First, run the development server:
+Staging: https://gdanska-szkola-fechtunku.vercel.app/
 
-```bash
+Repository: https://github.com/aleksandercuch/martial-arts-club
+
+Context & Problem
+
+This project was developed for a real martial arts school that needed a modern, performant web presence to replace a low-visibility, static solution.
+
+Key challenges included:
+
+Presenting structured content (classes, schedules, disciplines) in a clear way
+
+Ensuring strong SEO for local discovery
+
+Delivering excellent performance on mobile devices (primary user base)
+
+Keeping the solution maintainable and easy to extend
+
+Architecture & Design Decisions
+
+Component-driven architecture to ensure reusability and scalability
+
+Separation of concerns between UI, content, and configuration
+
+Responsive-first approach with emphasis on mobile UX
+
+Static generation / optimized rendering strategy for performance and SEO
+
+Minimal dependency footprint to reduce bundle size and long-term maintenance cost
+
+Trade-offs:
+
+Prioritized simplicity and reliability over over-engineering (e.g., avoided unnecessary backend complexity)
+
+Chose static/dynamic balance based on content update frequency
+
+Core Features
+
+Structured presentation of training programs and disciplines
+
+Dynamic or configurable class schedule
+
+Instructor profiles and content sections
+
+Contact flow optimized for conversion
+
+SEO optimization (semantic HTML, metadata, performance metrics)
+
+Performance & Quality
+
+Optimized asset delivery and lazy loading strategies
+
+Lighthouse-focused improvements (performance, accessibility, SEO)
+
+Mobile-first optimization due to target audience behavior
+
+Clean, maintainable codebase with consistent patterns
+
+Tech Stack
+
+Frontend: Next.js / React
+
+Styling: Tailwind / CSS Modules
+
+Deployment: Vercel / Dhosting
+
+Tooling: ESLint, Prettier
+
+My Contribution
+
+Owned the project end-to-end: from requirements gathering to deployment
+
+Designed the architecture and made key technical decisions
+
+Implemented the UI and core functionality
+
+Optimized for performance, SEO, and accessibility
+
+Delivered a production-ready solution used by a real client
+
+Impact
+
+Significantly improved the club’s online presence
+
+Increased accessibility for new users via search and mobile UX
+
+Provided a scalable foundation for future features (e.g., booking, CMS integration)
+
+Engineering Takeaways
+
+Pragmatic decision-making: balancing scalability with delivery speed
+
+Designing for real-world constraints (non-technical client, content changes)
+
+Building maintainable frontends without unnecessary complexity
+
+Focusing on user intent rather than purely technical solutions
+
+Future Improvements
+
+CMS integration for non-technical content management
+
+Online booking / scheduling system
+
+Analytics-driven UX improvements
+
+Internationalization (i18n) support
+
+Local Setup
+
+git clone https://github.com/aleksandercuch/martial-arts-club.git
+cd martial-arts-club
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Contact
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feel free to reach out if you’d like to discuss architecture decisions or implementation details.

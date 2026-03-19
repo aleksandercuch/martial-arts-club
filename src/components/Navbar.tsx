@@ -14,11 +14,11 @@ const navigationLeftSide: NavItem[] = [
   { name: "Home", href: "/" },
   {
     name: "O nas",
-    href: "/about",
+    href: "/o-nas",
     submenu: [
-      { name: "MIECZ DŁUGI", href: "/longsword" },
-      { name: "SZABLA", href: "/sabre" },
-      { name: "ZAJĘCIA DLA DZIECI", href: "/children-training" },
+      { name: "MIECZ DŁUGI", href: "/miecz-dlugi" },
+      { name: "SZABLA", href: "/szabla" },
+      { name: "ZAJĘCIA DLA DZIECI", href: "/szermierka-dzieci" },
     ],
   },
 ];
@@ -100,7 +100,7 @@ export default function Navbar() {
                     <div className="flex items-center px-8">
                       <Image
                         src="/logo_white.png"
-                        alt="Logo"
+                        alt="Trening szermierki w Gdańsku"
                         width={120}
                         height={40}
                         priority
@@ -140,7 +140,7 @@ export default function Navbar() {
             <Link href={"/"}>
               <Image
                 src="/logo_white.png"
-                alt="Logo"
+                alt="Trening szermierki w Gdańsku"
                 width={100}
                 height={40}
                 priority
