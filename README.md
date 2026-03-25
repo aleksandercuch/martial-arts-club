@@ -6,6 +6,7 @@ Staging: https://gdanska-szkola-fechtunku.vercel.app/
 
 Repository: https://github.com/aleksandercuch/martial-arts-club
 
+
 Context & Problem
 
 This project was developed for a real martial arts school that needed a modern, performant web presence to replace a low-visibility, static solution.
@@ -19,6 +20,7 @@ Ensuring strong SEO for local discovery
 Delivering excellent performance on mobile devices (primary user base)
 
 Keeping the solution maintainable and easy to extend
+
 
 Architecture & Design Decisions
 
@@ -35,11 +37,13 @@ The website uses duplicated static pages for Polish (/pl) and English (/en) cont
 
 Minimal dependency footprint to reduce bundle size and long-term maintenance cost
 
+
 Trade-offs:
 
 Prioritized simplicity and reliability over over-engineering (e.g., avoided unnecessary backend complexity)
 
 Chose static/dynamic balance based on content update frequency
+
 
 Core Features
 
@@ -53,6 +57,7 @@ Contact flow optimized for conversion
 
 SEO optimization (semantic HTML, metadata, performance metrics)
 
+
 Performance & Quality
 
 Optimized asset delivery and lazy loading strategies
@@ -63,6 +68,7 @@ Mobile-first optimization due to target audience behavior
 
 Clean, maintainable codebase with consistent patterns
 
+
 Tech Stack
 
 Frontend: Next.js / React
@@ -72,6 +78,7 @@ Styling: Tailwind / CSS Modules
 Deployment: Vercel / Dhosting
 
 Tooling: ESLint, Prettier
+
 
 My Contribution
 
@@ -85,6 +92,7 @@ Optimized for performance, SEO, and accessibility
 
 Delivered a production-ready solution used by a real client
 
+
 Impact
 
 Significantly improved the club’s online presence
@@ -92,6 +100,7 @@ Significantly improved the club’s online presence
 Increased accessibility for new users via search and mobile UX
 
 Provided a scalable foundation for future features (e.g., booking, CMS integration)
+
 
 Engineering Takeaways
 
@@ -102,6 +111,7 @@ Designing for real-world constraints (non-technical client, content changes)
 Building maintainable frontends without unnecessary complexity
 
 Focusing on user intent rather than purely technical solutions
+
 
 Future Improvements
 
