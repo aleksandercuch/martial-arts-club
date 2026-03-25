@@ -34,7 +34,8 @@ Designed and implemented a lightweight, content-driven platform optimized for:
 - Component-driven architecture → ensure scalability and reuse
 - Separation of concerns → clear boundaries between UI, content, and configuration
 - Minimal dependencies → lower bundle size and long-term maintenance cost
-- 
+
+  
 ## Trade-offs
 - Skipped backend layer → faster delivery and lower complexity
 - Chose static/dynamic balance based on content update frequency
