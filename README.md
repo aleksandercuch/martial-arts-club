@@ -3,7 +3,9 @@
 Production-grade, SEO-optimized web platform built for a real martial arts school to improve online visibility and drive new student acquisition.
 
 👉 Live: https://gdanskaszkolafechtunku.pl/
+
 👉 Staging: https://gdanska-szkola-fechtunku.vercel.app/
+
 👉 Repository: https://github.com/aleksandercuch/martial-arts-club
 
 ## Problem
