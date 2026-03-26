@@ -4,6 +4,8 @@ import "./globals.css";
 import { Bebas_Neue } from "next/font/google";
 import { lato } from "./fonts";
 import { schema } from "./schema";
+import { LanguageProvider } from "@/context/LanguageContext";
+import LayoutWrapper from "./LayoutWrapper";
 
 export const metadata = {
   title:
@@ -38,11 +40,9 @@ export default function RootLayout({
       </head>
       <body className="bg-[url('/bg.jpg')] bg-cover bg-center min-h-screen">
         <div className="flex flex-col min-h-screen">
-          <Navbar />
-
-          <main className="flex-grow">{children}</main>
-
-          <Footer />
+          <LanguageProvider>
+            <LayoutWrapper>{children}</LayoutWrapper>
+          </LanguageProvider>
         </div>
       </body>
     </html>
