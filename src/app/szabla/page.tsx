@@ -1,10 +1,16 @@
 "use client";
+
 import Image from "next/image";
 import { translations } from "@/messages/translations";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Page() {
+  const { lang } = useLanguage();
+  const t = translations[lang as "pl" | "en"];
+
   return (
     <div className="pt-28">
+      {/* Hero section */}
       <div className="relative w-full h-[50vh] overflow-hidden">
         <Image
           src="/background-about.png"
@@ -23,19 +29,21 @@ export default function Page() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-black/70 px-6 py-4 sm:px-10 sm:py-6 rounded-md shadow-lg w-full">
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-trajan tracking-widest text-center">
-              {translations.pl.Sword.title}
+              {t.Sabre.title}
             </h1>
           </div>
         </div>
       </div>
 
+      {/* Article content */}
       <div className="text-gray-900 font-trajan">
         <article className="bg-black/50 text-white max-w-5xl mx-auto px-6 py-16 leading-relaxed text-lg font-lato tracking-widest">
-          <p className="mb-4">{translations.pl.Sword.paragraphOne}</p>
+          <p className="mb-4">{t.Sabre.paragraphOne}</p>
           <div className="flex flex-col md:flex-row md:gap-8 items-start">
+            {/* Image */}
             <div className="w-full md:w-1/3 flex-shrink-0 mb-6 md:mb-0">
               <Image
-                src="/sword.jpg"
+                src="/szabla1.webp"
                 alt="Trening szermierki w Gdańsku"
                 width={400}
                 height={600}
@@ -44,10 +52,11 @@ export default function Page() {
               />
             </div>
 
+            {/* Text content */}
             <div className="w-full md:w-2/3">
-              <p className="mb-4">{translations.pl.Sword.paragraphTwo}</p>
-              <p className="mb-4">{translations.pl.Sword.paragraphThree}</p>
-              <p className="mb-4">{translations.pl.Sword.paragraphFour}</p>
+              <p className="mb-4">{t.Sabre.paragraphTwo}</p>
+              <p className="mb-4">{t.Sabre.paragraphThree}</p>
+              <p className="mb-4">{t.Sabre.paragraphFour}</p>
             </div>
           </div>
         </article>

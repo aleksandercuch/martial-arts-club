@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import { translations } from "@/messages/translations";
+import { useLanguage } from "@/context/LanguageContext";
 
 const slidesMobile = [
   "/mobile-carousel-1.png",
@@ -16,14 +16,13 @@ const slidesMobile = [
 const slidesDesktop = ["/desktop-carousel-2.png", "/desktop-carousel-3.png"];
 
 export const Carousel = () => {
-  const pathname = usePathname();
-  const segments = pathname.split("/").filter(Boolean);
-  const currentLocale = segments[0] === "en" ? "en" : "pl";
-  const t = translations[currentLocale];
+  const { lang } = useLanguage();
+  const t = translations[lang as "pl" | "en"];
 
   const [currentSlideMobile, setCurrentSlideMobile] = useState(0);
   const [currentSlideDesktop, setCurrentSlideDesktop] = useState(0);
 
+  // Mobile autoplay
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlideMobile((prev) => (prev + 1) % slidesMobile.length);
@@ -31,6 +30,7 @@ export const Carousel = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Desktop autoplay
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlideDesktop((prev) => (prev + 1) % slidesDesktop.length);
@@ -60,6 +60,7 @@ export const Carousel = () => {
 
   return (
     <>
+      {/* Mobile carousel */}
       <div className="relative w-full block md:hidden min-h-[60svh] max-h-[85svh] mt-28 overflow-hidden">
         {slidesMobile.map((src, index) => (
           <div
@@ -86,6 +87,7 @@ export const Carousel = () => {
         </div>
       </div>
 
+      {/* Desktop carousel */}
       <div className="relative w-full hidden md:block mt-28 overflow-hidden rounded-lg h-[calc(100vh-112px)] max-h-[900px] md:h-[calc(70vh-112px)] lg:h-[calc(100vh-112px)]">
         {slidesDesktop.map((src, index) => (
           <div
