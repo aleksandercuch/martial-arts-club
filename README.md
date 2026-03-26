@@ -1,122 +1,124 @@
-Martial Arts Club Platform
+## Martial Arts Club Platform
 
-Live: https://gdanskaszkolafechtunku.pl/
+Production-grade, SEO-optimized web platform built for a real martial arts school to improve online visibility and drive new student acquisition.
 
-Staging: https://gdanska-szkola-fechtunku.vercel.app/
+👉 Live: https://gdanskaszkolafechtunku.pl/
 
-Repository: https://github.com/aleksandercuch/martial-arts-club
+👉 Staging: https://gdanska-szkola-fechtunku.vercel.app/
 
-Context & Problem
+👉 Repository: https://github.com/aleksandercuch/martial-arts-club
 
-This project was developed for a real martial arts school that needed a modern, performant web presence to replace a low-visibility, static solution.
+## Problem
 
-Key challenges included:
+The client had a low-visibility website that failed to attract new students and performed poorly on mobile devices.
 
-Presenting structured content (classes, schedules, disciplines) in a clear way
+Key requirements:
 
-Ensuring strong SEO for local discovery
+- Improve SEO for local discovery
+- Optimize for mobile-first traffic (primary user base)
+- Present structured training content clearly
+- Keep the system simple, fast, and maintainable
+- Support multiple languages without server-side rendering complexity
 
-Delivering excellent performance on mobile devices (primary user base)
+## Solution
 
-Keeping the solution maintainable and easy to extend
+Designed and implemented a lightweight, content-driven platform optimized for:
 
-Architecture & Design Decisions
+- search engine visibility (SEO)
+- performance on mobile devices
+- clarity of content structure
+- low maintenance overhead
+- seamless language switching with **localStorage** to prevent content flicker
 
-Component-driven architecture to ensure reusability and scalability
+**Key enhancement:** added a **client-side language loader** to ensure pages display in the user’s preferred language immediately, avoiding flashes of default content before the language loads.
 
-Separation of concerns between UI, content, and configuration
+## Architecture & Key Decisions
+- Next.js 13+ (SSG/SSR hybrid) → maximize SEO and performance
+- **Language context using localStorage** → persist user preference for PL/EN without flicker
+- Component-driven architecture → ensure scalability and reuse
+- Separation of concerns → clear boundaries between UI, content, and configuration
+- Minimal dependencies → lower bundle size and long-term maintenance cost
 
-Responsive-first approach with emphasis on mobile UX
+## Trade-offs
+- Skipped full backend → faster delivery, lower complexity
+- Static-first approach with client-side i18n → simpler deployment on Dhosting
+- Prioritized reliability and user experience over over-engineering
 
-Static generation / optimized rendering strategy for performance and SEO
+## Internationalization
 
-Internationalization Approach:
-The website uses duplicated static pages for Polish (/pl) and English (/en) content. This approach was chosen due to the client’s requirement for a fully static solution on Dhosting. While Next.js supports dynamic [locale]-based routing and automatic redirects, implementing it would have introduced additional runtime complexity and hosting costs. Choosing a static, duplicated-page structure allowed us to deliver a fast, SEO-optimized, and maintainable solution that fit within the client’s budget and hosting constraints.
+- Implemented **client-side language context** using localStorage
+- Pages now render the correct language **before content loads**
+- Trade-off: less flexible dynamic routing but simpler and predictable infrastructure
+- Supported languages: `pl` (Polish) and `en` (English)
 
-Minimal dependency footprint to reduce bundle size and long-term maintenance cost
+## Core Features
+- Structured presentation of training programs and disciplines
+- Configurable class schedule
+- Instructor profiles and content sections
+- Conversion-oriented contact flow
+- **Client-side loader for language initialization**
+- SEO optimization (semantic HTML, metadata, performance tuning)
 
-Trade-offs:
+## Performance & Quality
+- Optimized asset delivery, lazy loading, and responsive images
+- Mobile-first design aligned with user behavior
+- Lighthouse-focused improvements (performance, accessibility, SEO)
+- Clean, consistent, and maintainable codebase
+- Minimal flicker during language initialization thanks to loader
 
-Prioritized simplicity and reliability over over-engineering (e.g., avoided unnecessary backend complexity)
-
-Chose static/dynamic balance based on content update frequency
-
-Core Features
-
-Structured presentation of training programs and disciplines
-
-Dynamic or configurable class schedule
-
-Instructor profiles and content sections
-
-Contact flow optimized for conversion
-
-SEO optimization (semantic HTML, metadata, performance metrics)
-
-Performance & Quality
-
-Optimized asset delivery and lazy loading strategies
-
-Lighthouse-focused improvements (performance, accessibility, SEO)
-
-Mobile-first optimization due to target audience behavior
-
-Clean, maintainable codebase with consistent patterns
-
-Tech Stack
-
+## Tech Stack
 Frontend: Next.js / React
-
+Language: TypeScript
 Styling: Tailwind / CSS Modules
-
 Deployment: Vercel / Dhosting
-
 Tooling: ESLint, Prettier
 
-My Contribution
+## My Role
 
-Owned the project end-to-end: from requirements gathering to deployment
+Full ownership of the project:
 
-Designed the architecture and made key technical decisions
+- Requirements gathering with client
+- Architecture design and technical decisions
+- Implementation of UI and core functionality
+- **Internationalization with client-side loader**
+- Performance and SEO optimization
+- Deployment and production delivery
 
-Implemented the UI and core functionality
+## Impact
+- Production website actively used by a real client
+- Improved mobile performance and accessibility
+- Increased visibility in local search (SEO-focused architecture)
+- Established a scalable foundation for future features
+- Smooth language switching without content flicker
 
-Optimized for performance, SEO, and accessibility
+## Engineering Takeaways
+- Pragmatic decision-making: balancing scalability with delivery speed
+- Designing under real-world constraints (budget, hosting, non-technical users)
+- Maintaining client-side state with **language context** for a better UX
+- Focusing on user intent and business goals over purely technical solutions
 
-Delivered a production-ready solution used by a real client
+## What I Would Do Differently
+- Introduce headless CMS for non-technical content management
+- Add booking system to support user conversion
+- Implement analytics to measure user behavior
+- Improve i18n with dynamic routing if infrastructure allowed
 
-Impact
+## Future Improvements
+- Online booking / scheduling system
+- CMS integration
+- Analytics-driven UX optimization
+- Extended internationalization support
+- Dynamic App Routes with middleware
 
-Significantly improved the club’s online presence
-
-Increased accessibility for new users via search and mobile UX
-
-Provided a scalable foundation for future features (e.g., booking, CMS integration)
-
-Engineering Takeaways
-
-Pragmatic decision-making: balancing scalability with delivery speed
-
-Designing for real-world constraints (non-technical client, content changes)
-
-Building maintainable frontends without unnecessary complexity
-
-Focusing on user intent rather than purely technical solutions
-
-Future Improvements
-
-CMS integration for non-technical content management
-
-Online booking / scheduling system
-
-Analytics-driven UX improvements
-
-Internationalization (i18n) support
-
-Local Setup
+## Local Setup
 git clone https://github.com/aleksandercuch/martial-arts-club.git
 cd martial-arts-club
 npm install
+npm run dev
+
+## Contact
+
+Feel free to reach out if you’d like to discuss **architecture decisions, implementation details, or language context handling**.
 npm run dev
 Contact
 
