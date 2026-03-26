@@ -18,6 +18,7 @@ Key requirements:
 - Optimize for mobile-first traffic (primary user base)
 - Present structured training content clearly
 - Keep the system simple, fast, and maintainable
+- Support multiple languages without server-side rendering complexity
 
 ## Solution
 
@@ -27,47 +28,43 @@ Designed and implemented a lightweight, content-driven platform optimized for:
 - performance on mobile devices
 - clarity of content structure
 - low maintenance overhead
+- seamless language switching with **localStorage** to prevent content flicker
+
+**Key enhancement:** added a **client-side language loader** to ensure pages display in the user’s preferred language immediately, avoiding flashes of default content before the language loads.
 
 ## Architecture & Key Decisions
-- Next.js (SSG/SSR hybrid) → maximize SEO and performance
-- Static-first approach → reduce hosting complexity and cost
+- Next.js 13+ (SSG/SSR hybrid) → maximize SEO and performance
+- **Language context using localStorage** → persist user preference for PL/EN without flicker
 - Component-driven architecture → ensure scalability and reuse
 - Separation of concerns → clear boundaries between UI, content, and configuration
 - Minimal dependencies → lower bundle size and long-term maintenance cost
 
-  
 ## Trade-offs
-- Skipped backend layer → faster delivery and lower complexity
-- Chose static/dynamic balance based on content update frequency
-- Prioritized reliability and simplicity over over-engineering
+- Skipped full backend → faster delivery, lower complexity
+- Static-first approach with client-side i18n → simpler deployment on Dhosting
+- Prioritized reliability and user experience over over-engineering
 
-  
 ## Internationalization
 
-Used duplicated static pages (/pl, /en) instead of dynamic routing.
-
-Reason:
-
-client hosting constraints (Dhosting)
-requirement for fully static deployment
-reduced operational complexity and cost
-
-Trade-off:
-
-less flexibility vs simpler and more predictable infrastructure
+- Implemented **client-side language context** using localStorage
+- Pages now render the correct language **before content loads**
+- Trade-off: less flexible dynamic routing but simpler and predictable infrastructure
+- Supported languages: `pl` (Polish) and `en` (English)
 
 ## Core Features
 - Structured presentation of training programs and disciplines
 - Configurable class schedule
 - Instructor profiles and content sections
 - Conversion-oriented contact flow
+- **Client-side loader for language initialization**
 - SEO optimization (semantic HTML, metadata, performance tuning)
 
 ## Performance & Quality
-- Optimized asset delivery and lazy loading
+- Optimized asset delivery, lazy loading, and responsive images
 - Mobile-first design aligned with user behavior
 - Lighthouse-focused improvements (performance, accessibility, SEO)
 - Clean, consistent, and maintainable codebase
+- Minimal flicker during language initialization thanks to loader
 
 ## Tech Stack
 Frontend: Next.js / React
@@ -76,27 +73,28 @@ Styling: Tailwind / CSS Modules
 Deployment: Vercel / Dhosting
 Tooling: ESLint, Prettier
 
-
 ## My Role
 
 Full ownership of the project:
 
-- requirements gathering with client
-- architecture design and key technical decisions
-- implementation of UI and core functionality
-- performance and SEO optimization
-- deployment and production delivery
-  
+- Requirements gathering with client
+- Architecture design and technical decisions
+- Implementation of UI and core functionality
+- **Internationalization with client-side loader**
+- Performance and SEO optimization
+- Deployment and production delivery
+
 ## Impact
 - Production website actively used by a real client
 - Improved mobile performance and accessibility
 - Increased visibility in local search (SEO-focused architecture)
 - Established a scalable foundation for future features
+- Smooth language switching without content flicker
 
 ## Engineering Takeaways
 - Pragmatic decision-making: balancing scalability with delivery speed
 - Designing under real-world constraints (budget, hosting, non-technical users)
-- Building maintainable systems without unnecessary complexity
+- Maintaining client-side state with **language context** for a better UX
 - Focusing on user intent and business goals over purely technical solutions
 
 ## What I Would Do Differently
@@ -120,7 +118,11 @@ npm run dev
 
 ## Contact
 
-Feel free to reach out if you'd like to discuss architecture decisions or implementation details.
+Feel free to reach out if you’d like to discuss **architecture decisions, implementation details, or language context handling**.
+npm run dev
+Contact
+
+Feel free to reach out if you’d like to discuss architecture decisions or implementation details.
 npm run dev
 Contact
 
