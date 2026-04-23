@@ -2,13 +2,11 @@ import { FaShieldAlt } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { CiDumbbell } from "react-icons/ci";
 import { translations } from "@/messages/translations";
-import { usePathname } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext";
 
 export const BulletSection = () => {
-  const pathname = usePathname();
-  const segments = pathname.split("/").filter(Boolean);
-  const currentLocale = segments[0] === "en" ? "en" : "pl";
-  const t = translations[currentLocale];
+  const { lang } = useLanguage();
+  const t = translations[lang as "pl" | "en"];
 
   return (
     <section className="w-full bg-black/40 text-white px-6 py-20 md:py-28 lg:py-36 font-trajan tracking-widest">

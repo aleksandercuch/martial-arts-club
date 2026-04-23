@@ -2,38 +2,33 @@
 
 import React from "react";
 import ReactCountryFlag from "react-country-flag";
-import styles from "./navbar.module.css";
-import { useRouter, usePathname } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext";
 
-export const ChangeLanguageButton = () => {
-  const router = useRouter();
-  const pathname = usePathname();
+export const ChangeLanguageButton = ({ size = 40 }) => {
+  const { lang, setLang } = useLanguage();
 
-  const segments = pathname.split("/");
-  const currentLocale = segments[1]; // "pl" or "en"
-
-  const changeLanguage = (newLocale: string) => {
-    const newPath = `/${newLocale}/${segments.slice(2).join("/")}`;
-    router.push(newPath === `/${newLocale}/` ? `/${newLocale}` : newPath);
+  const toggleLanguage = () => {
+    const newLang = lang === "pl" ? "en" : "pl";
+    setLang(newLang);
   };
 
   return (
-    <>
-      {currentLocale === "pl" ? (
+    <button onClick={toggleLanguage}>
+      {lang === "pl" ? (
         <ReactCountryFlag
           countryCode="GB"
           svg
-          className={styles.flagIcon}
-          onClick={() => changeLanguage("en")}
+          title="English"
+          style={{ width: size, height: size }}
         />
       ) : (
         <ReactCountryFlag
           countryCode="PL"
           svg
-          className={styles.flagIcon}
-          onClick={() => changeLanguage("pl")}
+          title="Polski"
+          style={{ width: size, height: size }}
         />
       )}
-    </>
+    </button>
   );
 };

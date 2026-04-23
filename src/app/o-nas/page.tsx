@@ -1,10 +1,15 @@
 "use client";
+
 import Image from "next/image";
 import { translations } from "@/messages/translations";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Page() {
+  const { lang } = useLanguage(); // "pl" | "en"
+  const t = translations[lang as "pl" | "en"];
+
   return (
-    <div className="pt-28 ">
+    <div className="pt-28">
       {/* Hero section */}
       <div className="relative w-full h-[50vh] overflow-hidden">
         <Image
@@ -24,7 +29,7 @@ export default function Page() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-black/70 px-6 py-4 sm:px-10 sm:py-6 rounded-md shadow-lg w-full">
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-trajan tracking-widest text-center">
-              {translations.pl.About.title}
+              {t.About.title}
             </h1>
           </div>
         </div>
@@ -45,9 +50,8 @@ export default function Page() {
             />
           </div>
 
-          <p>{translations.pl.About.paragraphOne}</p>
-
-          <p className="mt-6">{translations.pl.About.paragraphTwo}</p>
+          <p>{t.About.paragraphOne}</p>
+          <p className="mt-6">{t.About.paragraphTwo}</p>
 
           {/* Clear float before next image */}
           <div className="clear-both my-12" />
@@ -63,13 +67,10 @@ export default function Page() {
             />
           </div>
 
-          <p>{translations.en.About.paragraphThree}</p>
-
-          <p className="mt-6">{translations.pl.About.paragraphFour}</p>
-
-          <p className="mt-6">{translations.pl.About.paragraphFive}</p>
-
-          <p className="mt-6">{translations.pl.About.paragraphSix}</p>
+          <p>{t.About.paragraphThree}</p>
+          <p className="mt-6">{t.About.paragraphFour}</p>
+          <p className="mt-6">{t.About.paragraphFive}</p>
+          <p className="mt-6">{t.About.paragraphSix}</p>
 
           {/* Clear floats at end */}
           <div className="clear-both" />
