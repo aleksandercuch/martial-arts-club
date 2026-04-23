@@ -16,7 +16,8 @@ export default function Page() {
           src="/background-about.png"
           alt="Trening szermierki w Gdańsku"
           fill
-          className="object-cover object-bottom"
+          className="object-cover object-bottom opacity-0 transition-opacity duration-700"
+          onLoadingComplete={(img) => img.classList.remove("opacity-0")}
           priority
         />
         <div
