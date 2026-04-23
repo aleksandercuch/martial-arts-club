@@ -6,6 +6,7 @@ export const translations = {
       sword: "MIECZ DŁUGI",
       sabre: "SZABLA",
       children: "ZAJĘCIA DLA DZIECI",
+      junior: "SEKCJA JUNIORÓW",
       schedule: "GRAFIK",
       prices: "CENNIK",
       footer: "GDAŃSKA SZKOŁA FECHTUNKU. ALL RIGHTS RESERVED.",
@@ -68,6 +69,19 @@ export const translations = {
       paragraphThree:
         "Sekcja dzieci w Gdańskiej Szkole Fechtunku to nie tylko zajęcia sportowe – to fundament przyszłej sprawności, charakteru i świadomego stylu życia.",
     },
+    Junior: {
+      title: "SEKCJA JUNIORÓW",
+      paragraphOne:
+        "Sekcja juniorska to przestrzeń świadomego rozwoju młodzieży – okresu, w którym kształtuje się nie tylko sprawność fizyczna, lecz także charakter, odpowiedzialność i sposób podejścia do wyzwań.",
+      paragraphTwo:
+        "Trening opieramy na wszechstronnym przygotowaniu motorycznym oraz wprowadzeniu do szermierki historycznej. Rozwijamy siłę, koordynację, dynamikę, wytrzymałość oraz kontrolę nad ciałem. Zajęcia mają wymagający, ale dostosowany do wieku charakter – stanowią naturalny pomost pomiędzy treningiem dziecięcym a sekcjami dla dorosłych.",
+      paragraphThree:
+        "Obok rozwoju fizycznego kluczowy pozostaje aspekt mentalny. Pracujemy nad koncentracją, samodyscypliną i świadomym działaniem pod presją. Uczymy odpowiedzialności za partnera treningowego oraz zasad bezpiecznej i kontrolowanej walki.",
+      paragraphFour:
+        "Wprowadzamy podstawy pracy z bronią historyczną – mieczem długim oraz szablą – kładąc nacisk na zrozumienie dystansu, czasu i intencji działania. Trening łączy elementy techniczne z budowaniem postawy – stabilnej, opanowanej i konsekwentnej.",
+      paragraphFive:
+        "Sekcja juniorska w Gdańskiej Szkole Fechtunku to etap przejściowy, w którym rozwój fizyczny spotyka się ze świadomym kształtowaniem charakteru, a pierwsze doświadczenia walki stają się fundamentem dalszej drogi treningowej.",
+    },
   },
   en: {
     Layout: {
@@ -76,6 +90,7 @@ export const translations = {
       sword: "LONGSWORD",
       sabre: "SABRE",
       children: "FENCING FOR CHILDREN",
+      junior: "JUNIOR SECTION",
       schedule: "SCHEDULE",
       prices: "PRICES",
       footer: "GDAŃSKA SZKOŁA FECHTUNKU. ALL RIGHTS RESERVED.",
@@ -138,6 +153,19 @@ export const translations = {
         "Alongside physical development, the educational aspect is equally important to us. We teach focus, self-discipline, teamwork, and respect for one’s training partner. Through elements of fencing and general athletic exercises, we build self-confidence, mental resilience, and a healthy approach to challenges. ",
       paragraphThree:
         "The children’s section at the Gdańsk School of Fencing is more than just sports classes — it is a foundation for future physical capability, strong character, and a conscious, active lifestyle.",
+    },
+    Junior: {
+      title: "JUNIOR SECTION",
+      paragraphOne:
+        "The junior section is a space for the conscious development of young people – a stage in life where not only physical ability is shaped, but also character, responsibility, and one’s approach to challenges.",
+      paragraphTwo:
+        "Training is based on comprehensive physical preparation combined with an introduction to historical fencing. We develop strength, coordination, dynamics, endurance, and body control. The sessions are demanding yet adapted to the participants’ age – forming a natural bridge between children’s training and adult sections.",
+      paragraphThree:
+        "Alongside physical development, the mental aspect remains essential. We work on concentration, self-discipline, and the ability to act consciously under pressure. We teach responsibility for one’s training partner, as well as the principles of safe and controlled combat.",
+      paragraphFour:
+        "Participants are introduced to working with historical weapons – the longsword and the sabre – with emphasis on understanding distance, timing, and intent. Training combines technical elements with the development of a stable, composed, and consistent mindset.",
+      paragraphFive:
+        "The junior section at Gdańska Szkoła Fechtunku is a transitional stage where physical development meets the conscious shaping of character, and first experiences of combat become the foundation for further training.",
     },
   },
 };
