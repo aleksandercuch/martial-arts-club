@@ -41,6 +41,7 @@ export default function Navbar() {
         { name: t.Layout.sword, href: "/miecz-dlugi" },
         { name: t.Layout.sabre, href: "/szabla" },
         { name: t.Layout.children, href: "/szermierka-dzieci" },
+        { name: t.Layout.junior, href: "/sekcja-juniorow" },
       ],
     },
   ];
