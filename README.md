@@ -118,8 +118,6 @@ npm run dev
 
 ## Contact
 
-Feel free to reach out if you’d like to discuss **architecture decisions, implementation details, or language context handling**.
-npm run dev
 Contact
 
 Feel free to reach out if you’d like to discuss architecture decisions or implementation details.
